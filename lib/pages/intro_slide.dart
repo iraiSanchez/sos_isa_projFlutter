@@ -3,6 +3,7 @@ import 'package:intro_slider/dot_animation_enum.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
 import 'package:intro_slider/scrollbar_behavior_enum.dart';
+import 'package:sos_isa_projeto/pages/login.page.dart';
 // import 'package:intro_slider_example/home.dart';
 
 // void main() => runApp(new MyApp());
@@ -347,7 +348,7 @@ class IntroScreenState extends State<IntroScreen> {
       new Slide(
         title: "SOS ISA",
         description: "Aplicativo para realização de denúncias contra pessoas com deficiência.",
-        pathImage: "images/sosisa.png",
+        pathImage: "images/logo.png",
         backgroundColor: Colors.blue,
       ),
     );
@@ -355,23 +356,19 @@ class IntroScreenState extends State<IntroScreen> {
       new Slide(
         title: "SOS ISA",
         description: "24 horas e com total sigilo! \n Um atendente recebe a solicitação e encaminha ao Disque 100.",
-        pathImage: "images/sosisa.png",
+        pathImage: "images/logo.png",
         backgroundColor: Colors.blue,
       ),
     );
-    // slides.add(
-    //   new Slide(
-    //     title: "RULER",
-    //     description:
-    //     "Much evil soon high in hope do view. Out may few northward believing attempted. Yet timed being songs marry one defer men our. Although finished blessing do of",
-    //     pathImage: "images/photo_ruler.png",
-    //     backgroundColor: Color(0xff9932cc),
-    //   ),
-    // );
   }
 
   void onDonePress() {
-    // Do what you want
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LoginPage(),
+      ),
+    );  // Do what you want
   }
 
   @override

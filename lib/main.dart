@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'intro_slide.dart';
+import 'package:sos_isa_projeto/pages/login.page.dart';
+import 'pages/intro_slide.dart';
 
 void main(){
   runApp(new MyApp());
@@ -9,8 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: IntroScreen(),
+      title: 'SOS ISA',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange,
+      ),
+      home: IntroScreen(),
     );
+
   }
 }
