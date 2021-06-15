@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:sos_isa_projeto/pages/cad_user.page.dart';
 import 'package:sos_isa_projeto/pages/home.page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -11,6 +12,7 @@ class LoginPage extends StatelessWidget {
           top: 60,
           left: 40,
           right: 40,
+          bottom: 20,
         ),
         color: Color(0x972196F3),
         child: ListView(
@@ -190,7 +192,14 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  onPressed: () => {},
+                    onPressed: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CadUser(),
+                        ),
+                      ),
+                    },
                 ),
               ),
             ),

@@ -7,29 +7,27 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(
-          top: 60,
+          top: 30,
           left: 40,
           right: 40,
+          bottom: 20,
         ),
-        color: Color(0x972196F3),
+        color: Color(0xD7FFFFFF),
         child: ListView(
           children: <Widget>[
-            SizedBox(
-              width: 128,
-              height: 128,
-              child: Image.asset("images/logo.png"),
-            ),
+            // SizedBox(
+            //   width: 128,
+            //   height: 128,
+            //   child: Image.asset("images/logo.png"),
+            // ),
 
-
-            Text("HOME PAGE"),
-
-// - - - - Botão LOGIN - - - - -
+// - - - - Botão Denuncia - - - - -
             SizedBox(
               height: 40,
             ),
             Container(
-              height: 60,
-              alignment: Alignment.centerLeft,
+              height: 80,
+              alignment: Alignment.center,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -50,7 +48,7 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "HOME PAGE",
+                        "Denuncie",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -71,68 +69,21 @@ class HomePage extends StatelessWidget {
               ),
             ),
 
+// - - - - Botão Estatisticas - - - - -
             SizedBox(
-              height: 30,
+              height: 40,
             ),
             Container(
-              height: 30,
-              alignment: Alignment.centerRight,
-              child: FlatButton(
-                child: Text(
-                  "Recuperar senha",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xFF002D82),
-                    fontSize: 18,
-                  ) ,
-                  textAlign: TextAlign.right,
-                ),
-                onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) => ResetPasswordPage(),
-                  //     ),
-                  // );
-                },
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Divider(
-                      color: Colors.black38,
-                    ),
-                  ),
-
-                  Text("  ou  "),
-
-                  Expanded(
-                    child: Divider(
-                      color: Colors.black38,
-                    ),
-                  ),
-                ]
-            ),
-// - - - - Botão LOGIN - - - - -
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 25, right: 25),
-              height: 45,
-              alignment: Alignment.centerLeft,
+              height: 80,
+              alignment: Alignment.center,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  stops: [0.5, 1],
+                  stops: [0.3, 1],
                   colors: [
-                    Color(0xFF527EC2),
-                    Color(0xb2a0a0a0),
+                    Color(0xFF002D82),
+                    Colors.black38,
                   ],
                 ),
                 borderRadius: BorderRadius.all(
@@ -145,19 +96,75 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Cadastrar",
+                        "Estatísticas",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 20,
                         ) ,
                       ),
                     ],
                   ),
-                  onPressed: () => {},
+                  onPressed: () => {
+                    // Navigator.push(
+                    // context,
+                    // MaterialPageRoute(
+                    // builder: (context) => ResetPasswordPage(),
+                    // ),
+                    // );
+                  },
                 ),
               ),
             ),
+
+// - - - - Botão Telefones Uteis - - - - -
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              height: 80,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  stops: [0.3, 1],
+                  colors: [
+                    Color(0xFF002D82),
+                    Colors.black38,
+                  ],
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(5),
+                ),
+              ),
+              child: SizedBox.expand(
+                child: FlatButton(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Telefones Úteis",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
+                        ) ,
+                      ),
+                    ],
+                  ),
+                  onPressed: () => {
+                    // Navigator.push(
+                    // context,
+                    // MaterialPageRoute(
+                    // builder: (context) => ResetPasswordPage(),
+                    // ),
+                    // );
+                  },
+                ),
+              ),
+            ),
+
 
           ],
         ),

@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'SOS ISA',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.indigo,
       ),
       home: IntroScreen(),
     );
