@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:sos_isa_projeto/pages/denuncie.page.dart';
+import 'package:sos_isa_projeto/pages/telefones_uteis.page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -58,12 +60,12 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   onPressed: () => {
-                  // Navigator.push(
-                  // context,
-                  // MaterialPageRoute(
-                  // builder: (context) => ResetPasswordPage(),
-                  // ),
-                  // );
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                  builder: (context) => CadVi(),
+                  ),
+                  )
                 },
                 ),
               ),
@@ -154,12 +156,12 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   onPressed: () => {
-                    // Navigator.push(
-                    // context,
-                    // MaterialPageRoute(
-                    // builder: (context) => ResetPasswordPage(),
-                    // ),
-                    // );
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => TellUteis(),
+                    ),
+                    ),
                   },
                 ),
               ),
